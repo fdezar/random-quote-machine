@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        
+        const quotes = [
+        
+        {
+            quote: "Quality is not an act, it is a habit",
+            author: "Aristotle"
+        }, {
+            quote: "It does not matter how slowly you go as long as you do not stop.",
+            author: "Confucius",
+        }, {
+            quote: "To live is to suffer, to survive is to find some meaning in the suffering",
+            author: "Nietzsche",
+        }
+        
+        ]
+        
+        let initial = () => {
+           newQuote();
+        }
+
+        let newQuote = () => {
+            let quoteSize = quotes.length;
+            let randomIndex = Math.floor(Math.random() * quoteSize);
+            let randomResult = quotes[randomIndex];
+
+            let twitterShare = "twitter.com/intent/tweet";
+            
+            document.getElementById("tweet-quote").href = twitterShare;
+            document.getElementById("text").innerText = randomResult.quote;
+            document.getElementById("author").innerText = randomResult.author;
+        }
+
+        window.onload = initial;
+    </script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            background-color: darkseagreen;
+            height: 100vh;
+        }
+        #quote-box {
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div class="container d-flex justify-content-center">
+        <wrapper id="quote-box">
+            <div id="text"></div>
+            <div id="author"></div>
+            <button id="new-quote" class="btn btn-success" onClick="newQuote();">New Quote</button>
+            <a href="#" id="tweet-quote" class="button btn btn-primary" target="_blank">Tweet Quote</a>
+        </wrapper>
+    </div>
+</body>
+</html>
