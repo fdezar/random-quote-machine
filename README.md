@@ -1,4 +1,4 @@
-# React 25 + 5 Clock ⏰
+# React 25 + 5 Clock
 
 This is a Pomodoro Clock web application built using React.js. It helps users manage their time effectively using the Pomodoro Technique, allowing them to set a session length and break length.
 
