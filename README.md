@@ -1,4 +1,4 @@
-# Random Quote Machine 🎨
+# Random Quote Machine
 
 This is a simple web application built using HTML, CSS, and JavaScript that displays random quotes along with their authors. Users can click a button to generate a new random quote or tweet the current quote.
 
